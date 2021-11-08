@@ -5,7 +5,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 Why are you interested in this field/domain?  
 
-    We are interested in this domain because with living in Seattle, this city is primarily known for its rise in housing market costs. Due to the booming housing market, it has made it incredibly difficult for homebuyers to find a place. As college students, we have experienced how the uptick in costs has affected our options with living away from home and finding affordable housing in the U-District area. 
+We are interested in this domain because with living in Seattle, this city is primarily known for its rise in housing market costs. Due to the booming housing market, it has made it incredibly difficult for homebuyers to find a place. As college students, we have experienced how the uptick in costs has affected our options with living away from home and finding affordable housing in the U-District area. 
 
 What other examples of data driven projects have you found related to this domain?
 
@@ -17,11 +17,14 @@ What other examples of data driven projects have you found related to this domai
 
 
  What data-driven questions do you hope to answer about this domain
- 1. How do housing prices impact homelessness rates?
+1. How do housing prices impact homelessness rates?
 2. How has the pandemic affected housing affordability?
 3. Does the rise in rent directly correlate with the displacement of low-income families? 
-4. What is the average annual income for families living in various parts of Seattle? What do the demographics look like? Crime rates?
-5. What is the relationship between the level of income disparity and housing displacement due to gentrification? 
+4. On average, how has the price of a 4 bedroom house changed in the past 10 years? 
+5. What is the average annual income for families living in various parts of Seattle? What do the demographics look like?
+6. What is the relationship between the level of income disparity and housing displacement due to gentrification? 
+7. How do housing prices change as the location gets further away  from major metropolitan areas? 
+8. Have the prices of houses or units changed more on average?
 
 # **Finding Data**
 Where did you download the data?
@@ -57,7 +60,6 @@ How many features (columns) are in the data?
 What questions (from above) can be answered using the data in this dataset?
 
 1. On average, how has the price of a 4 bedroom house changed in the past 10 years? 
-
 2. How do housing prices change as the location gets further away  from major metropolitan areas? 
 3. Have the prices of houses or units changed more on average? 
 
