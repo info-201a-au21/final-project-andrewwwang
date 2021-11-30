@@ -32,3 +32,34 @@ mean_king_white_data <- king_white_data %>% group_by(Race, Year) %>% summarise(m
 mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 
 # ------------------------------------------------------
+# Sarah - Change in Race Over Time
+
+race_change <- wa_data_2 %>% 
+  filter(Year == 2014 | Year == 2015) %>%
+  filter(Total != ".") %>%
+  filter(White.Total != ".") %>%
+  filter(Black.Total != ".") %>%
+  filter(Asian.Total != ".") %>%
+  filter(AIAN.Total != ".") %>%
+  filter(NHOPI.Total != ".") %>%
+  filter(Two.or.More.Races.Total != ".") %>%
+  group_by(Year) %>%
+  summarise(total_pop_change = sum(Total, na.rm = T))
+
+# only the summarise functions dont work everything after should work
+
+(total_pop = sum(Total, na.rm = T)),
+            total_white = sum(White.Total, na.rm = T),
+            total_black = sum(Black.Total, na.rm = T),
+            total_asian = sum(Asian.Total, na.rm = T),
+            total_AIAN = sum(AIAN.Female, na.rm = T),
+            total_NHOPI = sum(NHOPI.Total, na.rm = T),
+            total_mixed = sum(Two.or.More.Races.Total, na.rm = T)) %>%
+  mutate(total_pop_change = c(NA, diff(total_pop)),
+         total_wht_change = c(NA, diff(total_white)),
+         total_blk_change = c(NA, diff(total_black)),
+         total_asn_change = c(NA, diff(total_asian)),
+         total_AIAN_change = c(NA, diff(total_AIAN)),
+         total_NHOPI_change = c(NA, diff(total_NHOPI)),
+         total_mixed_change = c(NA, diff(total_mixed)))
+
