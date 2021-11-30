@@ -56,5 +56,5 @@ mean_race_salaries <- ggplot(mean_all_race) +
   geom_line(aes(Year, Total_mean, colour = "Total")) +
   xlab("Year") + ylab("Dollars (USD)") + 
   scale_color_manual(name = "Legend", values = c("Asian" = "yellow", "Black" = "black", "Hispanic" = "brown", "Native American" = "red", "Pacific Islander" = "orange", "Two or plus" = "grey", "Other" = "blue", "White" = "pink", "White non-Hispanic" = "purple", "Total" = "cyan")) +
-  ggtitle("Mean Race Salaries over Time")
+  ggtitle("Mean Race Salaries over Time in King County")
 mean_race_salaries
