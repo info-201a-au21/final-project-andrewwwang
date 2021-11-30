@@ -30,14 +30,31 @@ mean_king_white_nonhispanic_data <- king_white_nonhispanic_data %>% group_by(Rac
 mean_king_white_data <- king_white_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 
+mean_all_race <- merge(mean_asian = mean_king_asian_data, mean_king_black_data, by = "Year") %>%
+  merge(mean_king_hispanic_data, by = "Year") %>%
+  merge(mean_king_native_data, by = "Year") %>%
+  merge(mean_king_pacific_data, by = "Year") %>%
+  merge(mean_king_twoplus_data, by = "Year") %>%
+  merge(mean_king_other_data, by = "Year") %>%
+  merge(mean_king_white_nonhispanic_data, by = "Year") %>%
+  merge(mean_king_white_data, by = "Year") %>%
+  merge(mean_king_total_data, by = "Year")
+
+colnames(mean_all_race) <- c("Year", "Asian", "Asian_mean", "Black", "Black_mean", "Hispanic", "Hispanic_mean", "Native", "Native_mean", "Islander", "Islander_mean", "Two", "Two_mean", "Other", "Other_mean", "White_not", "White_not_mean", "White", "White_mean", "Total", "Total_mean")
 # ------------------------------------------------------
 # Bar Chart to visualize disparities
-mean_race_salaries <- ggplot(change_in_jail_pop_over_time) + 
-  geom_line(aes(year, tot_pop_state, colour = "Total Jail Pop")) + 
-  geom_line(aes(year, tot_blk_state, colour = "Total Black Pop")) + 
-  geom_line(aes(year, tot_lat_state, colour = "Total Latinx Pop")) + 
-  geom_line(aes(year, tot_wht_state, colour = "Total White Pop")) + 
-  xlab("Year") + ylab("Population") + 
-  scale_color_manual(name = "Legend", values = c("Total Jail Pop" = "purple", "Total Black Pop" = "black", "Total Latinx Pop" = "brown", "Total White Pop" = "grey")) +
-  ggtitle("Change in Jail Population over Time")
-pop_over_time
+mean_race_salaries <- ggplot(mean_all_race) + 
+  geom_line(aes(Year, Asian_mean, colour = "Asian")) + 
+  geom_line(aes(Year, Black_mean, colour = "Black")) + 
+  geom_line(aes(Year, Hispanic_mean, colour = "Hispanic")) + 
+  geom_line(aes(Year, Native_mean, colour = "Native American")) +
+  geom_line(aes(Year, Islander_mean, colour = "Pacific Islander")) +
+  geom_line(aes(Year, Two_mean, colour = "Two or plus")) +
+  geom_line(aes(Year, Other_mean, colour = "Other")) +
+  geom_line(aes(Year, White_mean, colour = "White")) +
+  geom_line(aes(Year, White_not_mean, colour = "White non-Hispanic")) +
+  geom_line(aes(Year, Total_mean, colour = "Total")) +
+  xlab("Year") + ylab("Dollars (USD)") + 
+  scale_color_manual(name = "Legend", values = c("Asian" = "yellow", "Black" = "black", "Hispanic" = "brown", "Native American" = "red", "Pacific Islander" = "orange", "Two or plus" = "grey", "Other" = "blue", "White" = "pink", "White non-Hispanic" = "purple", "Total" = "cyan")) +
+  ggtitle("Mean Race Salaries over Time")
+mean_race_salaries
