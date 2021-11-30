@@ -2,20 +2,19 @@
 library("ggplot2")
 library("dplyr")
 library("tidyverse")
-library("here")
 
-# import your data set using its local path on your computer. My example is below:
-# wa_data_2 <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/washington_counties_2010_to_2020.csv")
-# king_asian_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Asian.csv")
-# king_black_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Black.csv")
-# king_hispanic_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Hispanic.csv")
-# king_native_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Native American.csv")
-# king_pacific_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Pacific Islander.csv")
-# king_twoplus_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Two Or More.csv")
-# king_other_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Other.csv")
-# king_white_nonhispanic_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location White Non-Hispanic.csv")
-# king_white_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location White.csv")
-# king_total_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Total.csv")
+# import the tables:
+wa_data_2 <- read.csv("https://drive.google.com/uc?export=download&id=1rOSIxDwHOdv0Z2yo_6vxJGaHQNrqVJxi")
+king_asian_data <- read.csv("https://drive.google.com/uc?export=download&id=13JFnaN3hqnLI3eTluHEX_2r4sW8yIsde")
+king_black_data <- read.csv("https://drive.google.com/uc?export=download&id=1Mq__cWrO1Vgocxg121-62BPtaWLeMxs8")
+king_hispanic_data <- read.csv("https://drive.google.com/uc?export=download&id=1wrdNRBs2U63PLvDDgrTAZYFP9GtO0202")
+king_native_data <- read.csv("https://drive.google.com/uc?export=download&id=1vkNeD2sOQynob5R6ua7oXxOepohpLVW9")
+king_pacific_data <- read.csv("https://drive.google.com/uc?export=download&id=15VoJ4CN7Pnl1XB0dsMcp14-vaMWN1V4X")
+king_twoplus_data <- read.csv("https://drive.google.com/uc?export=download&id=14tznF8F9S_RX6gYdwVm6o4JgqUYs0T5s")
+king_other_data <- read.csv("https://drive.google.com/uc?export=download&id=1vfqDaBQrcHUYbAJJsMuz_tGmlWGUxRXs")
+king_white_nonhispanic_data <- read.csv("https://drive.google.com/uc?export=download&id=1EWXFOx89j6WO7X4sejnv7DUsRMqlyYPu")
+king_white_data <- read.csv("https://drive.google.com/uc?export=download&id=1AolYNhHYC_Vt9T4CBXSqZ8aIf9fwEnWY")
+king_total_data <- read.csv("https://drive.google.com/uc?export=download&id=1VLUAA8vDQtg_RJLedd-SUlkGA7q2Kl0i")
 
 # ------------------------------------------------------
 # Andrew - Mean Household Income per race in King County
