@@ -35,7 +35,7 @@ mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(m
 # Sarah - Change in Race Over Time
 
 race_change <- wa_data_2 %>% 
-  filter(Year == 2014 | Year == 2015) %>%
+  filter(Year == "2014" | Year == "2015") %>%
   filter(Total != ".") %>%
   filter(White.Total != ".") %>%
   filter(Black.Total != ".") %>%
@@ -43,23 +43,25 @@ race_change <- wa_data_2 %>%
   filter(AIAN.Total != ".") %>%
   filter(NHOPI.Total != ".") %>%
   filter(Two.or.More.Races.Total != ".") %>%
+  mutate(numeric_total = as.numeric(sub(" ", "", Total, fixed = TRUE)),
+         numeric_white = as.numeric(sub(" ", "", White.Total, fixed = TRUE)),
+         numeric_black = as.numeric(sub(" ", "", Black.Total, fixed = TRUE)),
+         numeric_asian = as.numeric(sub(" ", "", Asian.Total, fixed = TRUE)),
+         numeric_AIAN = as.numeric(sub(" ", "", AIAN.Total, fixed = TRUE)),
+         numeric_NHOPI = as.numeric(sub(" ", "", NHOPI.Total, fixed = TRUE)),
+         numeric_mixed = as.numeric(sub(" ", "", Two.or.More.Races.Total, fixed = TRUE))) %>%
   group_by(Year) %>%
-  summarise(total_pop_change = sum(Total, na.rm = T))
-
-# only the summarise functions dont work everything after should work
-
-(total_pop = sum(Total, na.rm = T)),
-            total_white = sum(White.Total, na.rm = T),
-            total_black = sum(Black.Total, na.rm = T),
-            total_asian = sum(Asian.Total, na.rm = T),
-            total_AIAN = sum(AIAN.Female, na.rm = T),
-            total_NHOPI = sum(NHOPI.Total, na.rm = T),
-            total_mixed = sum(Two.or.More.Races.Total, na.rm = T)) %>%
+  summarise(total_pop = sum(numeric_total, na.rm = T),
+            total_white = sum(numeric_white, na.rm = T),
+            total_black = sum(numeric_black, na.rm = T),
+            total_asian = sum(numeric_asian, na.rm = T),
+            total_AIAN = sum(numeric_AIAN, na.rm = T),
+            total_NHOPI = sum(numeric_NHOPI, na.rm = T),
+            total_mixed = sum(numeric_mixed, na.rm = T)) %>%
   mutate(total_pop_change = c(NA, diff(total_pop)),
-         total_wht_change = c(NA, diff(total_white)),
-         total_blk_change = c(NA, diff(total_black)),
-         total_asn_change = c(NA, diff(total_asian)),
-         total_AIAN_change = c(NA, diff(total_AIAN)),
-         total_NHOPI_change = c(NA, diff(total_NHOPI)),
-         total_mixed_change = c(NA, diff(total_mixed)))
-
+       total_wht_change = c(NA, diff(total_white)),
+       total_blk_change = c(NA, diff(total_black)),
+       total_asn_change = c(NA, diff(total_asian)),
+       total_AIAN_change = c(NA, diff(total_AIAN)),
+       total_NHOPI_change = c(NA, diff(total_NHOPI)),
+       total_mixed_change = c(NA, diff(total_mixed)))
