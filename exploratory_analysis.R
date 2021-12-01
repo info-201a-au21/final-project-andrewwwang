@@ -34,7 +34,7 @@ mean_king_white_data <- king_white_data %>% group_by(Race, Year) %>% summarise(m
 mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 
 # ------------------------------------------------------
-# Change in Race Over Time
+# Change in Race Population Over Time
 
 race_change <- wa_data_2 %>% 
   filter(Year != ".") %>%

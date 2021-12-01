@@ -10,6 +10,7 @@ source("mean_race_salaries.R")
 source("difference_in_wage_by_gender.R")
 source("poverty_by_race.R")
 source("aggregate_table.R")
+source("exploratory_analysis.R")
 ```
 
 ## Instructions (remove this before turning in):
@@ -19,10 +20,18 @@ source("aggregate_table.R")
 - Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
 
 ## Introduction and Summary Information
+[Intro paragraph goes here]
 
- 
+[Summary paragraph of the 5 variables go here] <br />
+1. Mean Household Income per race in King County <br />
+2. Change in Race Population Over Time <br />
+3. Change in income per race <br />
+4. Average difference in wage between males and females of similar occupation <br />
+5. Race with the highest percentage in poverty <br />
+
 ## Our Aggregate Table
-```{r, echo=FALSE, results = 'asis'}
+[Describe the purpose of the chart and pertinent chart observations]
+```{r, echo=FALSE, results = 'asis', message=FALSE}
 # install.packages("kableExtra")
 library(kableExtra)
 library(knitr)
@@ -31,16 +40,19 @@ kable(aggregate_table, "html") %>% kable_styling("striped") %>% scroll_box(width
 ```
 
 ## Average Salary per Race Chart
+[Describe the purpose of the chart and pertinent chart observations]
 ```{r, echo=FALSE}
 plot(mean_race_salaries)
 ```
 
 ## Poverty by Race Chart
+[Describe the purpose of the chart and pertinent chart observations]
 ```{r, echo=FALSE}
 plot(bar_plot)
 ```
 
 ## Difference in Wage by Gender
+[Describe pertinent table observations]
 ```{r, echo=FALSE}
 plot(avg_income)
 ```
