@@ -20,8 +20,9 @@ source("exploratory_analysis.R")
 - Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
 
 ## Introduction and Summary Information
-[Intro paragraph goes here]
+Poverty is defined as "the state of being extremely poor". Across the US, low-income BIPOC communities have an increased risk of experiencing poverty in comparison to white middle-class families. Living in the U-District, our team has witnessed the ways in which poverty and low-income levels have affected houseless folx within our area. As a result, our project aims to analyze how factors such as household income, race, and gender impacts the poverty line. 
 
+In reviewing all of our data, we can conclude that Native and Black folx have the lowest median and mean income within the King County area. 
 [Summary paragraph of the 5 variables go here] <br />
 1. Mean Household Income per race in King County <br />
 2. Change in Race Population Over Time <br />
@@ -30,7 +31,8 @@ source("exploratory_analysis.R")
 5. Race with the highest percentage in poverty <br />
 
 ## Our Aggregate Table
-[Describe the purpose of the chart and pertinent chart observations]
+Based on the data, we can identify that Native and Black folx have the lowest median income within King County. From 2019, their median income ranged from $60,000 - $68,000. In contrast, white and Asian folx have have the highest median income ranging from $104,000 - $118,000. The purpose of this chart is to allow us to see the racial disparities in income and poverty.
+
 ```{r, echo=FALSE, results = 'asis', message=FALSE}
 # install.packages("kableExtra")
 library(kableExtra)
@@ -40,19 +42,23 @@ kable(aggregate_table, "html") %>% kable_styling("striped") %>% scroll_box(width
 ```
 
 ## Average Salary per Race Chart
-[Describe the purpose of the chart and pertinent chart observations]
+The purpose of this chart is to allow us to see the average income per race in King County. In analyzing the statistics, we can conclude that Asians have the highest average income than Black folx. 
+
 ```{r, echo=FALSE}
 plot(mean_race_salaries)
 ```
 
 ## Poverty by Race Chart
+The purpose of this chart is to allow us to see the percentage of race population in poverty within the King County area. According to the Race Chart, we can see that white people have the highest percentage of poverty in comparison to BIPOC folx. While this may be the case, the dataset only shows the percentage of the total white population in poverty. 
+
 [Describe the purpose of the chart and pertinent chart observations]
 ```{r, echo=FALSE}
 plot(bar_plot)
 ```
 
 ## Difference in Wage by Gender
-[Describe pertinent table observations]
+The purpose of this chart is to allow us to see the average wage for female and male workers from the same occupation. In analyzing the data, we can see that there is an income disparity and that male workers tend to get paid more by a significant amount. 
+
 ```{r, echo=FALSE}
 plot(avg_income)
 ```
