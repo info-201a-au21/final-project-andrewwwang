@@ -1,5 +1,5 @@
 ---
-title: "Assignment 3: Data Visualization of Incarceration"
+title: "Exploratory Analysis"
 author: "Andrew Wang, Sarah Huang, Joanna Phung, Kyle Dao"
 output: html_document
 ---
