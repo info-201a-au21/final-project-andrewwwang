@@ -28,5 +28,5 @@ bar_plot <- ggplot(data=poverty_by_race, aes(x=Race, y=mean_percent)) +
 
 bar_plot
 
-lint("difference_in_wage_by_gender.R")
-style_file("difference_in_wage_by_gender.R")
+# lint("difference_in_wage_by_gender.R")
+# style_file("difference_in_wage_by_gender.R")

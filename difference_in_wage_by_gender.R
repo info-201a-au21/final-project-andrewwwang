@@ -47,5 +47,5 @@ avg_income <- ggplot(merged_data, aes(color = Detailed.Occupation)) +
 
 avg_income
 
-lint("difference_in_wage_by_gender.R")
-style_file("difference_in_wage_by_gender.R")
+# lint("difference_in_wage_by_gender.R")
+# style_file("difference_in_wage_by_gender.R")

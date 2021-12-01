@@ -22,8 +22,9 @@ Describe the purpose of each chart (e.g., "this chart was intended to show the r
 
  
 ## Our Aggregate Table
-```{r, echo=FALSE}
-aggregate_table
+```{r, echo=FALSE, results = 'asis'}
+library(knitr)
+kable(aggregate_table, caption = "Aggregate Salary and Population Data for each Race per Year")
 ```
 
 ## Average Salary per Race Chart

@@ -44,4 +44,5 @@ king_pop_data_years <- king_pop_data_years %>% select("Year", "Total", "Male", "
 colnames(king_pop_data_years) <- c("Year", "Total.Pop", "Male.Pop", "Female.Pop", "White.Total.Pop", "White.Male.Pop", "White.Female.Pop", "Black.Total.Pop", "Black.Male.Pop", "Black.Female.Pop", "AIAN.Total.Pop", "AIAN.Male.Pop", "AIAN.Female.Pop", "Asian.Total.Pop", "Asian.Male.Pop", "Asian.Female.Pop", "NHOPI.Total.Pop", "NHOPI.Male.Pop", "NHOPI.Female.Pop", "Two.or.More.Races.Total.Pop", "Two.or.More.Races.Male.Pop", "Two.or.More.Races.Female.Pop")
 aggregate_table <- merge(aggregate_table, king_pop_data_years, by = "Year")
 
+aggregate_table_short <- aggregate_table %>% select("Year", "Asian_mean_salary", "Black_mean_salary", "Hispanic_mean_salary")
 aggregate_table
