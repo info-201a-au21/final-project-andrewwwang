@@ -35,7 +35,7 @@ mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(m
 # Sarah - Change in Race Over Time
 
 race_change <- wa_data_2 %>% 
-  filter(Year == "2014" | Year == "2015") %>%
+  filter(Year != ".") %>%
   filter(Total != ".") %>%
   filter(White.Total != ".") %>%
   filter(Black.Total != ".") %>%
