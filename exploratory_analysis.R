@@ -65,3 +65,16 @@ race_change <- wa_data_2 %>%
        total_AIAN_change = c(NA, diff(total_AIAN)),
        total_NHOPI_change = c(NA, diff(total_NHOPI)),
        total_mixed_change = c(NA, diff(total_mixed)))
+
+# ------------------------------------------------------
+# Sarah - Change in income per race
+
+income_change_white <- mutate(mean_king_white_data, c(NA, diff(mean)))
+income_change_black <- mutate(mean_king_black_data, c(NA, diff(mean)))
+income_change_asian <- mutate(mean_king_asian_data, c(NA, diff(mean)))
+income_change_hispanic <- mutate(mean_king_hispanic_data, c(NA, diff(mean)))
+income_change_pacific <- mutate(mean_king_pacific_data, c(NA, diff(mean)))
+income_change_twoplus <- mutate(mean_king_twoplus_data, c(NA, diff(mean)))
+income_change_other <- mutate(mean_king_other_data, c(NA, diff(mean)))
+income_change_white_nonhispanic <- mutate(mean_king_white_nonhispanic_data, c(NA, diff(mean)))
+income_change_total <- mutate(mean_king_total_data, c(NA, diff(mean)))
