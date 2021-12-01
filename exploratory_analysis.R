@@ -17,7 +17,7 @@ king_white_data <- read.csv("https://drive.google.com/uc?export=download&id=1Aol
 king_total_data <- read.csv("https://drive.google.com/uc?export=download&id=1VLUAA8vDQtg_RJLedd-SUlkGA7q2Kl0i")
 
 # ------------------------------------------------------
-# Andrew - Mean Household Income per race in King County
+# Mean Household Income per race in King County
 
 #king_county_data_years <- wa_data %>% filter(Area.Name == "King")
 mean_king_asian_data <- king_asian_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
@@ -32,7 +32,7 @@ mean_king_white_data <- king_white_data %>% group_by(Race, Year) %>% summarise(m
 mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 
 # ------------------------------------------------------
-# Sarah - Change in Race Over Time
+# Change in Race Over Time
 
 race_change <- wa_data_2 %>% 
   filter(Year != ".") %>%
@@ -65,3 +65,16 @@ race_change <- wa_data_2 %>%
        total_AIAN_change = c(NA, diff(total_AIAN)),
        total_NHOPI_change = c(NA, diff(total_NHOPI)),
        total_mixed_change = c(NA, diff(total_mixed)))
+
+# ------------------------------------------------------
+# Change in income per race
+
+income_change_white <- mutate(mean_king_white_data, c(NA, diff(mean)))
+income_change_black <- mutate(mean_king_black_data, c(NA, diff(mean)))
+income_change_asian <- mutate(mean_king_asian_data, c(NA, diff(mean)))
+income_change_hispanic <- mutate(mean_king_hispanic_data, c(NA, diff(mean)))
+income_change_pacific <- mutate(mean_king_pacific_data, c(NA, diff(mean)))
+income_change_twoplus <- mutate(mean_king_twoplus_data, c(NA, diff(mean)))
+income_change_other <- mutate(mean_king_other_data, c(NA, diff(mean)))
+income_change_white_nonhispanic <- mutate(mean_king_white_nonhispanic_data, c(NA, diff(mean)))
+income_change_total <- mutate(mean_king_total_data, c(NA, diff(mean)))
