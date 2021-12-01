@@ -20,18 +20,33 @@ source("exploratory_analysis.R")
 - Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
 
 ## Introduction and Summary Information
-Poverty is defined as "the state of being extremely poor". Across the US, low-income BIPOC communities have an increased risk of experiencing poverty in comparison to white middle-class families. Living in the U-District, our team has witnessed the ways in which poverty and low-income levels have affected houseless folx within our area. As a result, our project aims to analyze how factors such as household income, race, and gender impacts the poverty line. 
+Poverty is defined as "the state of being extremely poor". Across the US, low-income BIPOC communities have an increased risk of experiencing poverty in comparison to white middle-class families. Living in the U-District, our team has witnessed the ways in which poverty and low-income levels have affected houseless folks within our area. As a result, our project aims to analyze how factors such as household income, race, and gender impacts the poverty line. 
 
-In reviewing all of our data, we can conclude that Native and Black folx have the lowest median and mean income within the King County area. 
-[Summary paragraph of the 5 variables go here] <br />
-1. Mean Household Income per race in King County <br />
-2. Change in Race Population Over Time <br />
-3. Change in income per race <br />
-4. Average difference in wage between males and females of similar occupation <br />
-5. Race with the highest percentage in poverty <br />
+In reviewing all of our data, we can conclude that Native and Black folks have the lowest median and mean income within the King County area. <br /> 
+
+From our data we extracted five important variables: <br />
+_1. Mean Household Income per race in King County_ <br />
+  Here, we averaged the household income for each race in the King County area from 2013 to 2019. In doing so, we found that the Asian population (highest average of 118856.17 dollars) had the highest average household income whereas, like mentioned earlier, Native American and Black households had the lowest average income (highest average of 60598.58 and 67939.85 dollars respectively). 
+<br /> <br />
+  
+_2. Change in Race Population Over Time_ <br />
+  Next, we looked at the change in race population over time to view the migration of people over time. In recent years, it seems like there has been a decrease in white population (-2271 from 2019 to 2020), whereas there has been an increase in mixed population (+2275 from 2019 to 2020).
+<br /><br />
+
+_3. Change in income per race_ <br />
+  Next, we took a look at the change in average income per race over time. We found that Pacific Islanders had the highest increase in incoe (11943.051 dollars in 2015) whereas they also had the highest decrease in income (-4112.186 dollars in 2017)
+<br /><br />
+
+_4. Average difference in wage between males and females of similar occupation_ <br />
+  Next, we looked at the difference in wage between males and females of the same jobs in King County (in the most recent year). Here we found a relatively linear trend (males and females earn about the same), but saw that females tend to earn more as a software developer, whereas males tend to earn more as a retail salesperson. 
+<br /><br />
+
+_5. Race with the highest percentage in poverty_ <br />
+  Lastly, we looked at the poverty rates for each race in King County. This is directly related to our domain. We found that the White population has the highest rate of poverty at 43%, whereas the Native American and Pacific Islander population has the lowest rate of poverty at 1%.
+<br /><br />
 
 ## Our Aggregate Table
-Based on the data, we can identify that Native and Black folx have the lowest median income within King County. From 2019, their median income ranged from $60,000 - $68,000. In contrast, white and Asian folx have have the highest median income ranging from $104,000 - $118,000. The purpose of this chart is to allow us to see the racial disparities in income and poverty.
+Based on the data, we can identify that Native and Black folks have the lowest median income within King County. From 2019, their median income ranged from $60,000 - $68,000. In contrast, white and Asian folx have have the highest median income ranging from $104,000 - $118,000. The purpose of this chart is to allow us to see the racial disparities in income and poverty.
 
 ```{r, echo=FALSE, results = 'asis', message=FALSE}
 # install.packages("kableExtra")
@@ -42,7 +57,7 @@ kable(aggregate_table, "html") %>% kable_styling("striped") %>% scroll_box(width
 ```
 
 ## Average Salary per Race Chart
-The purpose of this chart is to allow us to see the average income per race in King County. In analyzing the statistics, we can conclude that Asians have the highest average income than Black folx. 
+The purpose of this chart is to allow us to see the average income per race in King County. In analyzing the statistics, we can conclude that Asians have the highest average income than Black folks. 
 
 ```{r, echo=FALSE}
 plot(mean_race_salaries)
@@ -56,7 +71,7 @@ The purpose of this chart is to allow us to see the percentage of race populatio
 plot(bar_plot)
 ```
 
-## Difference in Wage by Gender
+## Difference in Wage by Gender Chart
 The purpose of this chart is to allow us to see the average wage for female and male workers from the same occupation. In analyzing the data, we can see that there is an income disparity and that male workers tend to get paid more by a significant amount. 
 
 ```{r, echo=FALSE}
