@@ -1,7 +1,6 @@
 ---
 title: "Assignment 3: Data Visualization of Incarceration"
 author: "Andrew Wang, Sarah Huang, Joanna Phung, Kyle Dao"
-date: "11/20/2021"
 output: html_document
 ---
 
