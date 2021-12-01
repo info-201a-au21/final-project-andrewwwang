@@ -46,16 +46,16 @@ aggregate_table <- mean_all_race %>% select("Year", "Asian_mean_salary", "Black_
 # ------------------------------------------------------
 # Time Chart to visualize disparities
 mean_race_salaries <- ggplot(mean_all_race) + 
-  geom_line(aes(Year, Asian_mean, colour = "Asian")) + 
-  geom_line(aes(Year, Black_mean, colour = "Black")) + 
-  geom_line(aes(Year, Hispanic_mean, colour = "Hispanic")) + 
-  geom_line(aes(Year, Native_mean, colour = "Native American")) +
-  geom_line(aes(Year, Islander_mean, colour = "Pacific Islander")) +
-  geom_line(aes(Year, Two_mean, colour = "Two or plus")) +
-  geom_line(aes(Year, Other_mean, colour = "Other")) +
-  geom_line(aes(Year, White_mean, colour = "White")) +
-  geom_line(aes(Year, White_not_mean, colour = "White non-Hispanic")) +
-  geom_line(aes(Year, Total_mean, colour = "Total")) +
+  geom_line(aes(Year, Asian_mean_salary, colour = "Asian")) + 
+  geom_line(aes(Year, Black_mean_salary, colour = "Black")) + 
+  geom_line(aes(Year, Hispanic_mean_salary, colour = "Hispanic")) + 
+  geom_line(aes(Year, Native_mean_salary, colour = "Native American")) +
+  geom_line(aes(Year, Islander_mean_salary, colour = "Pacific Islander")) +
+  geom_line(aes(Year, Two_mean_salary, colour = "Two or plus")) +
+  geom_line(aes(Year, Other_mean_salary, colour = "Other")) +
+  geom_line(aes(Year, White_mean_salary, colour = "White")) +
+  geom_line(aes(Year, White_not_mean_salary, colour = "White non-Hispanic")) +
+  geom_line(aes(Year, Total_mean_salary, colour = "Total")) +
   xlab("Year") + ylab("Dollars (USD)") + 
   scale_color_manual(name = "Legend", values = c("Asian" = "yellow", "Black" = "black", "Hispanic" = "brown", "Native American" = "red", "Pacific Islander" = "orange", "Two or plus" = "grey", "Other" = "blue", "White" = "pink", "White non-Hispanic" = "purple", "Total" = "cyan")) +
   ggtitle("Mean Race Salaries over Time in King County")

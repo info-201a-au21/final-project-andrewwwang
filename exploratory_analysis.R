@@ -20,7 +20,6 @@ king_total_data <- read.csv("https://drive.google.com/uc?export=download&id=1VLU
 # ------------------------------------------------------
 # Mean Household Income per race in King County
 
-#king_county_data_years <- wa_data %>% filter(Area.Name == "King")
 mean_king_asian_data <- king_asian_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 mean_king_black_data <- king_black_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 mean_king_hispanic_data <- king_hispanic_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))

@@ -1,28 +1,43 @@
 ---
-title: "Exploratory Analysis"
+title: "Assignment 3: Data Visualization of Incarceration"
+author: "Andrew Wang, Sarah Huang, Joanna Phung, Kyle Dao"
+date: "11/20/2021"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, results = "hide")
+source("mean_race_salaries.R")
+source("difference_in_wage_by_gender.R")
+source("poverty_by_race.R")
+source("aggregate_table.R")
 ```
 
-## R Markdown
+## Instructions (remove this before turning in):
+Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
+Write a summary paragraph that includes information calculated by your summary information function
+Render your table and describe pertinent observations found in it
+Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Introduction and Summary Information
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+ 
+## Our Aggregate Table
+```{r, echo=FALSE}
+aggregate_table
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Average Salary per Race Chart
+```{r, echo=FALSE}
+plot(mean_race_salaries)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Poverty by Race Chart
+```{r, echo=FALSE}
+plot(bar_plot)
+```
+
+## Difference in Wage by Gender
+```{r, echo=FALSE}
+plot(avg_income)
+```
