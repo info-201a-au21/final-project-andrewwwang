@@ -13,18 +13,21 @@ source("aggregate_table.R")
 ```
 
 ## Instructions (remove this before turning in):
-Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
-Write a summary paragraph that includes information calculated by your summary information function
-Render your table and describe pertinent observations found in it
-Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+- Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
+- Write a summary paragraph that includes information calculated by your summary information function
+- Render your table and describe pertinent observations found in it
+- Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
 
 ## Introduction and Summary Information
 
  
 ## Our Aggregate Table
 ```{r, echo=FALSE, results = 'asis'}
+# install.packages("kableExtra")
+library(kableExtra)
 library(knitr)
-kable(aggregate_table, caption = "Aggregate Salary and Population Data for each Race per Year")
+kable(aggregate_table, "html") %>% kable_styling("striped") %>% scroll_box(width = "100%")
+# kable(aggregate_table, caption = "Aggregate Salary and Population Data for each Race per Year")
 ```
 
 ## Average Salary per Race Chart
