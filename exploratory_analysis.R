@@ -4,6 +4,7 @@ library("dplyr")
 library("tidyverse")
 
 # import the tables:
+housing_prices <- read.csv("https://drive.google.com/uc?export=download&id=13YmSnSbW9oZ6kmRD5bsbq3oDi2Z_Swf8")
 wa_data_2 <- read.csv("https://drive.google.com/uc?export=download&id=1rOSIxDwHOdv0Z2yo_6vxJGaHQNrqVJxi")
 king_asian_data <- read.csv("https://drive.google.com/uc?export=download&id=13JFnaN3hqnLI3eTluHEX_2r4sW8yIsde")
 king_black_data <- read.csv("https://drive.google.com/uc?export=download&id=1Mq__cWrO1Vgocxg121-62BPtaWLeMxs8")
