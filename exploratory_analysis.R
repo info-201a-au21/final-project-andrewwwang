@@ -15,6 +15,8 @@ king_other_data <- read.csv("https://drive.google.com/uc?export=download&id=1vfq
 king_white_nonhispanic_data <- read.csv("https://drive.google.com/uc?export=download&id=1EWXFOx89j6WO7X4sejnv7DUsRMqlyYPu")
 king_white_data <- read.csv("https://drive.google.com/uc?export=download&id=1AolYNhHYC_Vt9T4CBXSqZ8aIf9fwEnWY")
 king_total_data <- read.csv("https://drive.google.com/uc?export=download&id=1VLUAA8vDQtg_RJLedd-SUlkGA7q2Kl0i")
+gender_data <- read.csv("data/Wage by Gender in Common Jobs.csv")
+poverty_data <- read.csv("data/Poverty by Race and Ethnicity.csv")
 
 # ------------------------------------------------------
 # Mean Household Income per race in King County
@@ -78,3 +80,43 @@ income_change_twoplus <- mutate(mean_king_twoplus_data, c(NA, diff(mean)))
 income_change_other <- mutate(mean_king_other_data, c(NA, diff(mean)))
 income_change_white_nonhispanic <- mutate(mean_king_white_nonhispanic_data, c(NA, diff(mean)))
 income_change_total <- mutate(mean_king_total_data, c(NA, diff(mean)))
+
+# ------------------------------------------------------
+# Average difference in wage between males and females of similar occupation
+
+# Average income by gender and occupation
+avg_income_gender <- gender_data %>%
+  group_by(Gender, Detailed.Occupation) %>%
+  summarize(mean_wage = mean(Average.Wage))
+
+# Splitting into male only
+male_only <- subset(avg_income_gender, Gender == "Male")
+
+# Splitting into male only
+female_only <- subset(avg_income_gender, Gender == "Female")
+
+# Finding average wage for male workers
+male_avg <- male_only %>%
+  summarize(mean = mean(mean_wage)) %>%
+  pull(mean)
+
+# Finding average wage for male workers
+female_avg <- female_only %>%
+  summarize(mean = mean(mean_wage)) %>%
+  pull(mean)
+
+# Average difference in wage
+difference_in_wage_between_genders <- male_avg - female_avg
+
+# ------------------------------------------------------
+# Race with the highest percentage in poverty
+
+# Average poverty percentage across years
+poverty_by_race <- poverty_data %>%
+  group_by(Race) %>%
+  summarize(mean_percent = round(mean(share), 2))
+
+# Race with highest percentage of poverty
+highest_poverty_rate <- poverty_by_race %>%
+  filter(mean_percent == max(mean_percent)) %>%
+  pull(Race)

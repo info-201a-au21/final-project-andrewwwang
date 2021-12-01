@@ -11,6 +11,10 @@ poverty_by_race <- poverty_data %>%
   group_by(Race) %>%
   summarize(mean_percent = round(mean(share), 2))
 
+highest_poverty_rate <- poverty_by_race %>%
+  filter(mean_percent == max(mean_percent)) %>%
+  pull(Race)
+
 # Creating bar chart for data
 bar_plot <- ggplot(data=poverty_by_race, aes(x=Race, y=mean_percent)) +
   geom_bar(stat="identity", fill="steelblue")+

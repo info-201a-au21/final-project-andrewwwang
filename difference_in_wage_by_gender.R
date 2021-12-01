@@ -20,6 +20,19 @@ female_only <- subset(avg_income_gender, Gender == "Female")
 # Rejoin data
 merged_data <- merge(male_only, female_only, by = "Detailed.Occupation")
 
+# Finding average wage for male workers
+male_avg <- male_only %>%
+  summarize(mean = mean(mean_wage)) %>%
+  pull(mean)
+
+# Finding average wage for male workers
+female_avg <- female_only %>%
+  summarize(mean = mean(mean_wage)) %>%
+  pull(mean)
+
+# Average difference in wage
+difference_in_wage_between_genders <- male_avg - female_avg
+
 # Creating scatterplot for data
 avg_income <- ggplot(merged_data, aes(color = Detailed.Occupation)) +
   geom_point(aes(
