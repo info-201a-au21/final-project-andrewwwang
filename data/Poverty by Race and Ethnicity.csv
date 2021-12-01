@@ -1,0 +1,57 @@
+ID Race,Race,ID Year,Year,ID Poverty Status,Poverty Status,Poverty Population,Poverty Population Moe,Geography,ID Geography,Slug Geography,share
+1,"White",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",121898,2722.3807595558706,"King County, WA","05000US53033","king-county-wa",0.43942567311817105
+1,"White",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",120208,2646.2828646990856,"King County, WA","05000US53033","king-county-wa",0.45222769390511375
+1,"White",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",116426,2641.21411475859,"King County, WA","05000US53033","king-county-wa",0.4367771245924887
+1,"White",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",110121,2519.830946710513,"King County, WA","05000US53033","king-county-wa",0.43051836098003415
+1,"White",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",105823,2472.4669866350087,"King County, WA","05000US53033","king-county-wa",0.426772758619299
+1,"White",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",98507,2411.9442365029918,"King County, WA","05000US53033","king-county-wa",0.4181449267980015
+1,"White",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",92777,2419.3232524819828,"King County, WA","05000US53033","king-county-wa",0.41477742658005445
+9,"Hispanic",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",43945,1615.7908280467495,"King County, WA","05000US53033","king-county-wa",0.15841573450899954
+9,"Hispanic",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",43000,1614.626582216458,"King County, WA","05000US53033","king-county-wa",0.16176785935977547
+9,"Hispanic",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",40353,1626.9320821718404,"King County, WA","05000US53033","king-county-wa",0.15138600749558256
+4,"Asian",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",37507,1519.882890225428,"King County, WA","05000US53033","king-county-wa",0.13520762212376938
+4,"Asian",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",37171,1493.9866130591665,"King County, WA","05000US53033","king-county-wa",0.13944859823602457
+4,"Asian",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",36746,1489.8466364025528,"King County, WA","05000US53033","king-county-wa",0.14365859093699054
+9,"Hispanic",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",36470,1554.1679445928617,"King County, WA","05000US53033","king-county-wa",0.14257956815631756
+2,"Black",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",35517,1522.1310718857296,"King County, WA","05000US53033","king-county-wa",0.13324354640846048
+2,"Black",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",35482,1455.6843751308181,"King County, WA","05000US53033","king-county-wa",0.12790777316755766
+9,"Hispanic",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",35452,1536.1044886335042,"King County, WA","05000US53033","king-county-wa",0.14297409673295397
+2,"Black",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",35185,1478.2219048573186,"King County, WA","05000US53033","king-county-wa",0.13755585702166256
+4,"Asian",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",34804,1375.2512497722007,"King County, WA","05000US53033","king-county-wa",0.14773687181903464
+4,"Asian",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",34776,1427.032235094919,"King County, WA","05000US53033","king-county-wa",0.14024786155887417
+2,"Black",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",34399,1533.3606881617907,"King County, WA","05000US53033","king-county-wa",0.13872746117332968
+4,"Asian",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",34301,1534.8032447190094,"King County, WA","05000US53033","king-county-wa",0.12904184520696882
+2,"Black",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",34014,1436.5458572562172,"King County, WA","05000US53033","king-county-wa",0.12796213879682333
+2,"Black",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",33534,1551.5424583297745,"King County, WA","05000US53033","king-county-wa",0.14992019814108612
+2,"Black",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",33294,1618.2839676645135,"King County, WA","05000US53033","king-county-wa",0.14132718682746062
+4,"Asian",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",33116,1335.0082396749467,"King County, WA","05000US53033","king-county-wa",0.1480514487278645
+9,"Hispanic",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",31879,1430.3510058723348,"King County, WA","05000US53033","king-county-wa",0.13532076016317104
+9,"Hispanic",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",30076,1463.1845406509733,"King County, WA","05000US53033","king-county-wa",0.1344605439044345
+7,"Two Or More",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",18544,1211.6410359508297,"King County, WA","05000US53033","king-county-wa",0.0724978204521731
+7,"Two Or More",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",17697,1131.7234644558714,"King County, WA","05000US53033","king-county-wa",0.07137009449066586
+7,"Two Or More",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",17385,1069.498480597331,"King County, WA","05000US53033","king-county-wa",0.06522057196021865
+7,"Two Or More",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",17023,1053.6802171437025,"King County, WA","05000US53033","king-county-wa",0.06136559446004549
+7,"Two Or More",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",16189,1069.6050673028808,"King County, WA","05000US53033","king-county-wa",0.06871946379376945
+6,"Other",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",14770,1097.9612925782037,"King County, WA","05000US53033","king-county-wa",0.06603212639541486
+7,"Two Or More",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",14759,1024.1127867573962,"King County, WA","05000US53033","king-county-wa",0.06598294877927745
+6,"Other",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",14599,1078.3533743629682,"King County, WA","05000US53033","king-county-wa",0.06197019284237693
+7,"Two Or More",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",14428,975.8017216627567,"King County, WA","05000US53033","king-county-wa",0.054278759880066065
+6,"Other",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",14211,1049.866658199983,"King County, WA","05000US53033","king-county-wa",0.05122871778603692
+6,"Other",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",13908,1070.1766209369366,"King County, WA","05000US53033","king-county-wa",0.052322497394785054
+6,"Other",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",13285,1044.4060513038019,"King County, WA","05000US53033","king-county-wa",0.05357697379829893
+6,"Other",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",13217,1044.142231690683,"King County, WA","05000US53033","king-county-wa",0.0495841414781829
+6,"Other",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",11994,973.620562642347,"King County, WA","05000US53033","king-county-wa",0.046890576925332404
+3,"Native American",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",3978,433.39127817712256,"King County, WA","05000US53033","king-county-wa",0.014340147727313691
+3,"Native American",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",3672,417.53562722239644,"King County, WA","05000US53033","king-county-wa",0.01381422278067664
+3,"Native American",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",3585,408.40910861536867,"King County, WA","05000US53033","king-county-wa",0.013449281016818167
+5,"Pacific Islander",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",3458,484.70712806807376,"King County, WA","05000US53033","king-county-wa",0.013519060781040475
+5,"Pacific Islander",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",3399,483.22251603169326,"King County, WA","05000US53033","king-county-wa",0.013707800823516601
+5,"Pacific Islander",2014,"2014",0,"Income In The Past 12 Months Below Poverty Level",3359,436.47336688508267,"King County, WA","05000US53033","king-county-wa",0.012108737108106256
+5,"Pacific Islander",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",3302,480.4591553920062,"King County, WA","05000US53033","king-county-wa",0.014016410491508228
+3,"Native American",2016,"2016",0,"Income In The Past 12 Months Below Poverty Level",3269,387.2738049494182,"King County, WA","05000US53033","king-county-wa",0.012780164746449194
+3,"Native American",2017,"2017",0,"Income In The Past 12 Months Below Poverty Level",3130,386.83846758046184,"King County, WA","05000US53033","king-county-wa",0.012622952803061771
+3,"Native American",2018,"2018",0,"Income In The Past 12 Months Below Poverty Level",3007,403.1042048900011,"King County, WA","05000US53033","king-county-wa",0.012764187264677542
+5,"Pacific Islander",2015,"2015",0,"Income In The Past 12 Months Below Poverty Level",2903,455.92323915325915,"King County, WA","05000US53033","king-county-wa",0.010890728812224026
+3,"Native American",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",2389,415.41425107956996,"King County, WA","05000US53033","king-county-wa",0.010680484086570487
+5,"Pacific Islander",2013,"2013",0,"Income In The Past 12 Months Below Poverty Level",2282,371.2627102201351,"King County, WA","05000US53033","king-county-wa",0.008584982675790876
+5,"Pacific Islander",2019,"2019",0,"Income In The Past 12 Months Below Poverty Level",2258,399.3469669347697,"King County, WA","05000US53033","king-county-wa",0.01009482338529768
