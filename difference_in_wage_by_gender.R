@@ -4,7 +4,7 @@ library("lintr")
 library("styler")
 library("mapproj")
 
-gender_data <- read.csv("data/Wage by Gender in Common Jobs.csv")
+gender_data <- read.csv("https://drive.google.com/uc?export=download&id=1ztb-6If76_5n5abDAmaMcYrCVOxsQgXf")
 
 # Average income by gender and occupation
 avg_income_gender <- gender_data %>%

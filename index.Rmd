@@ -12,13 +12,6 @@ source("poverty_by_race.R")
 source("aggregate_table.R")
 source("exploratory_analysis.R")
 ```
-
-## Instructions (remove this before turning in):
-- Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
-- Write a summary paragraph that includes information calculated by your summary information function
-- Render your table and describe pertinent observations found in it
-- Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
-
 ## Introduction and Summary Information
 Poverty is defined as "the state of being extremely poor". Across the US, low-income BIPOC communities have an increased risk of experiencing poverty in comparison to white middle-class families. Living in the U-District, our team has witnessed the ways in which poverty and low-income levels have affected houseless folks within our area. As a result, our project aims to analyze how factors such as household income, race, and gender impacts the poverty line. 
 
@@ -26,7 +19,7 @@ In reviewing all of our data, we can conclude that Native and Black folks have t
 
 From our data we extracted five important variables: <br />
 _1. Mean Household Income per race in King County_ <br />
-  Here, we averaged the household income for each race in the King County area from 2013 to 2019. In doing so, we found that the Asian population (highest average of 118856.17 dollars) had the highest average household income whereas, like mentioned earlier, Native American and Black households had the lowest average income (highest average of 60598.58 and 67939.85 dollars respectively). 
+  Here, we averaged the household income for each race in the King County area from 2013 to 2019. In doing so, we found that the Asian population (highest average of $118856.17) had the highest average household income whereas, like mentioned earlier, Native American and Black households had the lowest average income (highest average of $60598.58 and $67939.85 respectively). 
 <br /> <br />
   
 _2. Change in Race Population Over Time_ <br />
@@ -34,7 +27,7 @@ _2. Change in Race Population Over Time_ <br />
 <br /><br />
 
 _3. Change in income per race_ <br />
-  Next, we took a look at the change in average income per race over time. We found that Pacific Islanders had the highest increase in incoe (11943.051 dollars in 2015) whereas they also had the highest decrease in income (-4112.186 dollars in 2017)
+  Next, we took a look at the change in average income per race over time. We found that Pacific Islanders had the highest increase in incoe ($11943.051 in 2015) whereas they also had the highest decrease in income (-$4112.186 in 2017)
 <br /><br />
 
 _4. Average difference in wage between males and females of similar occupation_ <br />
@@ -66,7 +59,6 @@ plot(mean_race_salaries)
 ## Poverty by Race Chart
 The purpose of this chart is to allow us to see the percentage of race population in poverty within the King County area. According to the Race Chart, we can see that white people have the highest percentage of poverty in comparison to BIPOC folx. While this may be the case, the dataset only shows the percentage of the total white population in poverty. 
 
-[Describe the purpose of the chart and pertinent chart observations]
 ```{r, echo=FALSE}
 plot(bar_plot)
 ```

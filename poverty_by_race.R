@@ -4,7 +4,7 @@ library("lintr")
 library("styler")
 library("mapproj")
 
-poverty_data <- read.csv("data/Poverty by Race and Ethnicity.csv")
+poverty_data <- read.csv("https://drive.google.com/uc?export=download&id=1Fu7qskDJgFUFfjNd9PDwxEr6HnSE0OOM")
 
 # Average poverty percentage across years
 poverty_by_race <- poverty_data %>%

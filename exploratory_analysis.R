@@ -16,8 +16,8 @@ king_other_data <- read.csv("https://drive.google.com/uc?export=download&id=1vfq
 king_white_nonhispanic_data <- read.csv("https://drive.google.com/uc?export=download&id=1EWXFOx89j6WO7X4sejnv7DUsRMqlyYPu")
 king_white_data <- read.csv("https://drive.google.com/uc?export=download&id=1AolYNhHYC_Vt9T4CBXSqZ8aIf9fwEnWY")
 king_total_data <- read.csv("https://drive.google.com/uc?export=download&id=1VLUAA8vDQtg_RJLedd-SUlkGA7q2Kl0i")
-gender_data <- read.csv("data/Wage by Gender in Common Jobs.csv")
-poverty_data <- read.csv("data/Poverty by Race and Ethnicity.csv")
+gender_data <- read.csv("https://drive.google.com/uc?export=download&id=1ztb-6If76_5n5abDAmaMcYrCVOxsQgXf")
+poverty_data <- read.csv("https://drive.google.com/uc?export=download&id=1Fu7qskDJgFUFfjNd9PDwxEr6HnSE0OOM")
 
 # ------------------------------------------------------
 # Mean Household Income per race in King County
