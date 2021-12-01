@@ -2,20 +2,19 @@
 library("ggplot2")
 library("dplyr")
 library("tidyverse")
-library("here")
 
-# import your data set using its local path on your computer. My example is below:
-# wa_data_2 <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/washington_counties_2010_to_2020.csv")
-# king_asian_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Asian.csv")
-# king_black_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Black.csv")
-# king_hispanic_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Hispanic.csv")
-# king_native_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Native American.csv")
-# king_pacific_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Pacific Islander.csv")
-# king_twoplus_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Two Or More.csv")
-# king_other_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Other.csv")
-# king_white_nonhispanic_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location White Non-Hispanic.csv")
-# king_white_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location White.csv")
-# king_total_data <- read.csv("C:/Users/endur/OneDrive/Documents/GitHub/final-project-andrewwwang/data/Income By Race/Income by Location Total.csv")
+# import the tables:
+wa_data_2 <- read.csv("https://drive.google.com/uc?export=download&id=1rOSIxDwHOdv0Z2yo_6vxJGaHQNrqVJxi")
+king_asian_data <- read.csv("https://drive.google.com/uc?export=download&id=13JFnaN3hqnLI3eTluHEX_2r4sW8yIsde")
+king_black_data <- read.csv("https://drive.google.com/uc?export=download&id=1Mq__cWrO1Vgocxg121-62BPtaWLeMxs8")
+king_hispanic_data <- read.csv("https://drive.google.com/uc?export=download&id=1wrdNRBs2U63PLvDDgrTAZYFP9GtO0202")
+king_native_data <- read.csv("https://drive.google.com/uc?export=download&id=1vkNeD2sOQynob5R6ua7oXxOepohpLVW9")
+king_pacific_data <- read.csv("https://drive.google.com/uc?export=download&id=15VoJ4CN7Pnl1XB0dsMcp14-vaMWN1V4X")
+king_twoplus_data <- read.csv("https://drive.google.com/uc?export=download&id=14tznF8F9S_RX6gYdwVm6o4JgqUYs0T5s")
+king_other_data <- read.csv("https://drive.google.com/uc?export=download&id=1vfqDaBQrcHUYbAJJsMuz_tGmlWGUxRXs")
+king_white_nonhispanic_data <- read.csv("https://drive.google.com/uc?export=download&id=1EWXFOx89j6WO7X4sejnv7DUsRMqlyYPu")
+king_white_data <- read.csv("https://drive.google.com/uc?export=download&id=1AolYNhHYC_Vt9T4CBXSqZ8aIf9fwEnWY")
+king_total_data <- read.csv("https://drive.google.com/uc?export=download&id=1VLUAA8vDQtg_RJLedd-SUlkGA7q2Kl0i")
 
 # ------------------------------------------------------
 # Andrew - Mean Household Income per race in King County
@@ -33,3 +32,36 @@ mean_king_white_data <- king_white_data %>% group_by(Race, Year) %>% summarise(m
 mean_king_total_data <- king_total_data %>% group_by(Race, Year) %>% summarise(mean = mean(Household.Income.by.Race))
 
 # ------------------------------------------------------
+# Sarah - Change in Race Over Time
+
+race_change <- wa_data_2 %>% 
+  filter(Year != ".") %>%
+  filter(Total != ".") %>%
+  filter(White.Total != ".") %>%
+  filter(Black.Total != ".") %>%
+  filter(Asian.Total != ".") %>%
+  filter(AIAN.Total != ".") %>%
+  filter(NHOPI.Total != ".") %>%
+  filter(Two.or.More.Races.Total != ".") %>%
+  mutate(numeric_total = as.numeric(sub(" ", "", Total, fixed = TRUE)),
+         numeric_white = as.numeric(sub(" ", "", White.Total, fixed = TRUE)),
+         numeric_black = as.numeric(sub(" ", "", Black.Total, fixed = TRUE)),
+         numeric_asian = as.numeric(sub(" ", "", Asian.Total, fixed = TRUE)),
+         numeric_AIAN = as.numeric(sub(" ", "", AIAN.Total, fixed = TRUE)),
+         numeric_NHOPI = as.numeric(sub(" ", "", NHOPI.Total, fixed = TRUE)),
+         numeric_mixed = as.numeric(sub(" ", "", Two.or.More.Races.Total, fixed = TRUE))) %>%
+  group_by(Year) %>%
+  summarise(total_pop = sum(numeric_total, na.rm = T),
+            total_white = sum(numeric_white, na.rm = T),
+            total_black = sum(numeric_black, na.rm = T),
+            total_asian = sum(numeric_asian, na.rm = T),
+            total_AIAN = sum(numeric_AIAN, na.rm = T),
+            total_NHOPI = sum(numeric_NHOPI, na.rm = T),
+            total_mixed = sum(numeric_mixed, na.rm = T)) %>%
+  mutate(total_pop_change = c(NA, diff(total_pop)),
+       total_wht_change = c(NA, diff(total_white)),
+       total_blk_change = c(NA, diff(total_black)),
+       total_asn_change = c(NA, diff(total_asian)),
+       total_AIAN_change = c(NA, diff(total_AIAN)),
+       total_NHOPI_change = c(NA, diff(total_NHOPI)),
+       total_mixed_change = c(NA, diff(total_mixed)))
