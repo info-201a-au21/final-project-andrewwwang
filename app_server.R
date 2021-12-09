@@ -16,6 +16,12 @@ salary_table <- aggregate_table %>%
            "Other_mean_salary", "White_not_mean_salary", "White_mean_salary",
            "Total_mean_salary")
 
+colnames(salary_table) <- c("Year", "Asian Mean Salary", "Black Mean Salary", 
+                            "Hispanic Mean Salary", "Native Mean Salary",
+                            "Islander Mean Salary", "Two Mean Salary", 
+                            "Other Mean Salary", "White Not Mean Salary", "White Mean Salary",
+                            "Total Mean Salary")
+
 pop_table <- aggregate_table %>%
   select("Year", "Total.Pop", "Male.Pop", 
          "Female.Pop", "White.Total.Pop",
@@ -27,6 +33,19 @@ pop_table <- aggregate_table %>%
          "NHOPI.Total.Pop", "NHOPI.Female.Pop", 
          "Two.or.More.Races.Total.Pop", "Two.or.More.Races.Male.Pop",
          "Two.or.More.Races.Female.Pop")
+
+pop_table <- data.frame(apply(apply(pop_table, 2, gsub, patt=",", replace=""), 2, as.numeric))
+
+colnames(pop_table) <- c("Year", "Total Pop", "Male Pop", 
+                         "Female Pop", "White Total Pop",
+                         "White Male Pop", "White Female Pop", 
+                         "Black Total Pop", "Black Male Pop", "Black Female Pop",
+                         "AIAN Total Pop", "AIAN Female Pop", "AIAN Male Pop", 
+                         "Asian Total Pop", "Asian Male Pop", 
+                         "Asian Female Pop", "NHOPI Male Pop", 
+                         "NHOPI Total Pop", "NHOPI Female Pop", 
+                         "Two or More Races Total Pop", "Two or More Races Male Pop",
+                         "Two or More Races Female Pop")
 
 # plot salary chart
 plot_salary_bar_chart <- function(chosen_year) {
