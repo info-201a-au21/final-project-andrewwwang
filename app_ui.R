@@ -119,7 +119,8 @@ summary_page <- tabPanel(
 first_page <- tabPanel(
   "Population Interaction Tab", # label for the tab in the navbart
   sidebarLayout( sidebarPanel(
-    selectInput(inputId = "year_pop", "Select date", choices = c("2013", "2014", "2015", "2016", "2017", "2018", "2019"))
+    selectInput(inputId = "year_pop", "Select date", choices = c("2013", "2014", "2015", "2016", "2017", "2018", "2019")),
+    br("Change the year to see how the population of different races in King County vary by year.")
   ), # close sidebarLayout
   
   mainPanel(
@@ -136,8 +137,9 @@ first_page <- tabPanel(
 second_page <- tabPanel(
   "Salary Interation Tab", # label for the tab in the navbart
   sidebarLayout( sidebarPanel(
-    selectInput(inputId = "year_salary", "Select date", choices = c("2013", "2014", "2015", "2016", "2017", "2018", "2019"))
-  ), # close sidebarLayout
+    selectInput(inputId = "year_salary", "Select date", choices = c("2013", "2014", "2015", "2016", "2017", "2018", "2019")),
+    br("Change the year to see how the average salary of different races in King County vary by year.")
+    ),
   
   mainPanel(
     h3("Salary"),
@@ -159,7 +161,9 @@ poverty_sidebar <- sidebarPanel(
   sliderInput(
     inputId = "pov_size",
     label = "Size of point", min = 1, max = 10, value = 3
-  )
+  ),
+  br("Change the year to see how the percentage of different races in King County vary by year. 
+     Additionally, you can adjust the size of the points for easier viewing.")
 )
 
 # Percentage poverty by year chart
@@ -177,9 +181,9 @@ third_page <- tabPanel(
 ui <- navbarPage(
   title = span( "Poverty Rates in King County", style = "font-size:40px;" ),
   tags$style(type = 'text/css', 
-             '.navbar { background-color: #A83C3B;}',
-             '.navbar-default .navbar-brand{color: white;}',
-             '.tab-panel{ background-color: grey; color: white}',
+             '.navbar { background-color: #d6dbde;}',
+             '.navbar-default .navbar-brand{color: #465055;}',
+             '.tab-panel{ background-color: black; color: white}',
              '.nav navbar-nav li.active:hover a, .nav navbar-nav li.active a {
                         background-color: blue ;
                         border-color: blue;
