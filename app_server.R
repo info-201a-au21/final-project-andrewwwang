@@ -95,5 +95,6 @@ server <- function(input, output) {
   })
 }
 
-lint("app_server.R")
-style_file("app_server.R")
+# lint("app_server.R")
+# style_file("app_server.R")
+ 
