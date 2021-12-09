@@ -120,3 +120,4 @@ poverty_by_race <- poverty_data %>%
 highest_poverty_rate <- poverty_by_race %>%
   filter(mean_percent == max(mean_percent)) %>%
   pull(Race)
+
