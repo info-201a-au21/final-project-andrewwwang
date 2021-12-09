@@ -1,41 +1,47 @@
 first_page <- tabPanel(
-  "Page 1",
-  textInput(
-    inputId = "textInput",
-    label = h3("test text input"),
-    placeholder = "enter text here"
-  ),
-  textOutput(
-    outputId = "message"
-  )
+  "Population Interaction Tab", # label for the tab in the navbart
+  sidebarLayout( sidebarPanel(
+    selectInput(inputId = "year_pop", "Select date", choices = c("2013", "2014", "2015", "2016", "2017", "2018", "2019"))
+  ), # close sidebarLayout
+  
+  mainPanel(
+    h3("Population"),
+    br(), br(),
+    plotlyOutput(outputId = "pop_plot"),
+    br(), br(),
+    
+  ) )
 )
 
 second_page <- tabPanel(
-  "Page 2",
-  textInput(
-    inputId = "textInput",
-    label = h3("test text input"),
-    placeholder = "enter text here"
-  ),
-  textOutput(
-    outputId = "message"
-  )
+  "Salary Interation Tab", # label for the tab in the navbart
+  sidebarLayout( sidebarPanel(
+    selectInput(inputId = "year_salary", "Select date", choices = c("2013", "2014", "2015", "2016", "2017", "2018", "2019"))
+  ), # close sidebarLayout
+  
+  mainPanel(
+    h3("Salary"),
+    br(), br(),
+    plotlyOutput(outputId = "salary_plot"),
+    br(), br(),
+    
+  ) )
 )
 
 third_page <- tabPanel(
   "Page 3",
   textInput(
-    inputId = "textInput",
+    inputId = "textInput3",
     label = h3("test text input"),
     placeholder = "enter text here"
   ),
   textOutput(
-    outputId = "message"
+    outputId = "message3"
   )
 )
 
 ui <- navbarPage(
-  "Assignment 4", # title
+  "Poverty Rates", # title
   first_page, 
   second_page,
   third_page
