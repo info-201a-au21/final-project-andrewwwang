@@ -57,7 +57,7 @@ intro_page <- tabPanel(
     towards our community members. "),
   
   img(src = "https://mltoday.com/wp-content/uploads/2017/12/poverty-1280x640.jpg",
-      width = "320px", height = "188px"),
+      width = "320px", height = "160px"),
   
   
 )

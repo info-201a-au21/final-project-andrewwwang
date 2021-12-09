@@ -8,7 +8,7 @@ library(plotly)
 library(lintr)
 library(styler)
 
-# source("aggregate_table.R")
+source("aggregate_table.R")
 salary_table <- aggregate_table %>%
     select("Year", "Asian_mean_salary", "Black_mean_salary", 
            "Hispanic_mean_salary", "Native_mean_salary",
